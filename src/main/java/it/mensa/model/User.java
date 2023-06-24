@@ -1,4 +1,4 @@
-package it.mensa.mensa.model;
+package it.mensa.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

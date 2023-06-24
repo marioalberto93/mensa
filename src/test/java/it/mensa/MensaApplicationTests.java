@@ -1,4 +1,4 @@
-package it.mensa.mensa;
+package it.mensa;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
