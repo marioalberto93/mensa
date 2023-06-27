@@ -1,10 +1,11 @@
 package it.mensa.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 @Entity
 @NoArgsConstructor
@@ -14,5 +15,15 @@ public class Prenotazione {
 
     @Id
     private Long id;
+    private float costoTotale;
+    private LocalDate dataPrenotazione;
+    private Long numeroPrenotazione;
+
+    @OneToOne
+    @JoinColumn(name = "prodotto_id")
+    private Prodotto prodotto;
+    @ManyToOne
+    @JoinColumn(name = "anagrafica_id")
+    private Anagrafica anagrafica;
 
 }
