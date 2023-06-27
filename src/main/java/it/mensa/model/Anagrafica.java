@@ -27,7 +27,6 @@ public class Anagrafica {
     private LocalDate dataNascita;
     private LocalDate dataCreazione;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
     private User user;
 
 
