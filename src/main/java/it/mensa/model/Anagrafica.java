@@ -24,6 +24,7 @@ public class Anagrafica {
     private String luogoNascita;
     private String nazione;
     private Long matricola;
+    private Genere genere;
     private LocalDate dataNascita;
     private LocalDate dataCreazione;
     @OneToOne(cascade = CascadeType.ALL)
