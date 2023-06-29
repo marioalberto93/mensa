@@ -26,7 +26,12 @@ public class Prodotto {
     @OneToMany(mappedBy = "prodotto", fetch = FetchType.LAZY)
     private Set<Foto> foto;
 
-    @OneToMany(mappedBy = "prodotto")
+    @ManyToMany
+    @JoinTable(
+            name = "prodotto_orario",
+            joinColumns = @JoinColumn(name = "prodotto_id"),
+            inverseJoinColumns = @JoinColumn(name = "orarioDisponibile_id")
+    )
     private Set<OrarioDisponibile> orarioDisponibile;
     @ManyToOne
     private Negozio negozio;
