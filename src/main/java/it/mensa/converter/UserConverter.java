@@ -2,7 +2,9 @@ package it.mensa.converter;
 
 import it.mensa.dto.UserDTO;
 import it.mensa.model.User;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserConverter extends AbstractConverter<User, UserDTO>{
 
     @Override
