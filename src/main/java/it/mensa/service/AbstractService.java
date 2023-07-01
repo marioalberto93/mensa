@@ -1,13 +1,16 @@
 package it.mensa.service;
 
 import it.mensa.converter.Converter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 
 import javax.swing.text.html.parser.Entity;
 
 public class AbstractService<DTO> implements ServiceDTO<DTO>{
 
+    @Autowired
     CrudRepository<Entity, Long> crudRepository;
+    @Autowired
     Converter<Entity, DTO> converter;
     @Override
     public DTO read(long id) {
