@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class Negozio {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String citta;
     private String descrizione;
@@ -23,3 +23,4 @@ public class Negozio {
     private Anagrafica anagrafica;
 
 }
+

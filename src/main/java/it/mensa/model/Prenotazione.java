@@ -1,3 +1,4 @@
+
 package it.mensa.model;
 
 import jakarta.persistence.*;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 public class Prenotazione {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private float costoTotale;
     private LocalDate dataPrenotazione;

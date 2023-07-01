@@ -15,10 +15,10 @@ import java.util.Set;
 public class OrarioDisponibile {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToMany(mappedBy = "orarioDisponibile")
+    @ManyToMany(targetEntity=Prodotto.class,mappedBy = "orarioDisponibile")
     private Set<Prodotto> prodotto;
     private LocalTime orarioDisponibile;
 

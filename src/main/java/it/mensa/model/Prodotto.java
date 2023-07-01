@@ -1,3 +1,4 @@
+
 package it.mensa.model;
 
 import jakarta.persistence.*;
@@ -14,7 +15,7 @@ import java.util.Set;
 public class Prodotto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
     @Column(unique = true)
@@ -26,7 +27,7 @@ public class Prodotto {
     @OneToMany(mappedBy = "prodotto", fetch = FetchType.LAZY)
     private Set<Foto> foto;
 
-    @ManyToMany
+    @ManyToMany(targetEntity=OrarioDisponibile.class)
     @JoinTable(
             name = "prodotto_orario",
             joinColumns = @JoinColumn(name = "prodotto_id"),
@@ -36,3 +37,5 @@ public class Prodotto {
     @ManyToOne
     private Negozio negozio;
 }
+
+
