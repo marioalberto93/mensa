@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 import javax.swing.text.html.parser.Entity;
 
-public class AbstractService<DTO> implements ServiceDTO<DTO>{
+public abstract class AbstractService<DTO> implements ServiceDTO<DTO>{
 
     @Autowired
     CrudRepository<Entity, Long> crudRepository;
