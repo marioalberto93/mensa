@@ -24,5 +24,5 @@ public class AnagraficaDTO {
     private Genere genere;
     private LocalDate dataNascita;
     private LocalDate dataCreazione;
-    private User user;
+    private UserDTO user;
 }

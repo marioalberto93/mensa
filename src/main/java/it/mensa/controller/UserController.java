@@ -18,4 +18,9 @@ public class UserController extends AbstractController<UserDTO>{
     public UserDTO login(@RequestBody LoginDTO loginDTO){
         return service.findByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());
     }
+
+    @PostMapping("/insertuser")
+    public UserDTO insertUser(@RequestBody  UserDTO dto){
+        return service.insert(dto);
+    }
 }
