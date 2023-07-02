@@ -16,6 +16,6 @@ public class UserController extends AbstractController<UserDTO>{
 
     @GetMapping("/login")
     public UserDTO login(@RequestBody LoginDTO loginDTO){
-        return service.findUserByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());
+        return service.findByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());
     }
 }
