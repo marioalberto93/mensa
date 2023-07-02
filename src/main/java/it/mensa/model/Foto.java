@@ -14,7 +14,7 @@ import java.sql.Blob;
 public class Foto {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
     @JoinColumn(name = "prodotto_id")

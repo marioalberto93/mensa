@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 @Transactional
-public interface AnagraficaRepository extends CrudRepository<Anagrafica, AnagraficaDTO> {
+public interface AnagraficaRepository extends CrudRepository<Anagrafica, Long> {
 
     Anagrafica findByUser(User user);
 }

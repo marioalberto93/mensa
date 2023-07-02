@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.*;
 public class UserController extends AbstractController<UserDTO>{
 
     @Autowired
-    UserService service;
+    UserService userService;
 
     @GetMapping("/login")
     public UserDTO login(@RequestBody LoginDTO loginDTO){
-        return service.findByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());
+        return userService.findByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());
     }
 
     @PostMapping("/insertuser")

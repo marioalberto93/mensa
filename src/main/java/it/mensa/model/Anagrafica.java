@@ -13,7 +13,7 @@ import java.time.LocalDate;
 public class Anagrafica {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String cognome;
@@ -26,6 +26,7 @@ public class Anagrafica {
     private LocalDate dataNascita;
     private LocalDate dataCreazione;
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_user")
     private User user;
 
 

@@ -15,9 +15,11 @@ public class AnagraficaService extends AbstractService<Anagrafica, AnagraficaDTO
     @Autowired
     UserConverter userConverter;
     @Autowired
-    AnagraficaRepository repository;
+    AnagraficaRepository anagraficaRepository;
+    @Autowired
+    AnagraficaConverter anagraficaConverter;
 
     public AnagraficaDTO findByUser(UserDTO userDTO){
-        return converter.toDTO(repository.findByUser(userConverter.toEntity(userDTO)));
+        return anagraficaConverter.toDTO(anagraficaRepository.findByUser(userConverter.toEntity(userDTO)));
     }
 }
