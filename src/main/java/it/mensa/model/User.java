@@ -14,10 +14,10 @@ public class User{
         ADMIN, USER
     }
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(unique = true)
     private String username;
-    private String pass;
+    private String password;
     private Usertype usertype;
 }
