@@ -5,7 +5,6 @@ import it.mensa.model.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.time.LocalDate;
 
 @Data
@@ -24,5 +23,5 @@ public class AnagraficaDTO {
     private Genere genere;
     private LocalDate dataNascita;
     private LocalDate dataCreazione;
-    private User user;
+    private UserDTO user;
 }
