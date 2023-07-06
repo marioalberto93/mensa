@@ -1,11 +1,9 @@
 package it.mensa.model;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.EnableMBeanExport;
-
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Data
@@ -15,7 +13,7 @@ import java.time.LocalDate;
 public class Anagrafica {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private String cognome;
@@ -28,6 +26,7 @@ public class Anagrafica {
     private LocalDate dataNascita;
     private LocalDate dataCreazione;
     @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_user")
     private User user;
 
 
